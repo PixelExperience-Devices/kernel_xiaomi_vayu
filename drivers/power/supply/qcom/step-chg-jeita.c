@@ -898,7 +898,7 @@ static int handle_jeita(struct step_chg_info *chip)
 	pr_info("%s:batt_soc=%d\n", __func__, batt_soc);
 	rc = power_supply_get_property(chip->bms_psy,
 			POWER_SUPPLY_PROP_FASTCHARGE_MODE, &pval);
-	pr_err("%s:fastcharge_mode=%d\n", __func__, pval.intval);
+	pr_debug("%s:fastcharge_mode=%d\n", __func__, pval.intval);
 	if (rc < 0) {
 		pr_err("Couldn't read fastcharge mode fail rc=%d\n", rc);
 		return rc;
